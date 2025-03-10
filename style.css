@@ -1,0 +1,157 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+:root{
+    /* --accent-color: #8672ff;
+    --base-color: #ffffff;
+    --text-color: #2e2b41;
+    --input-color:#f3f0ff; */
+    /* --accent-color: #FB9161;
+    --base-color:#F68CFF;
+    --text-color: #2e2b41;
+    --input-color:#5F1BF0; */
+    /* --accent-color: #FAB12F;
+    --base-color:#FEF3E2;
+    --text-color: #FA812F;
+    --input-color:#FA812F; */
+    /* --accent-color: #AA60C8;
+    --base-color:#FDB7EA;
+    --text-color: #BE5985;
+    --input-color:#FBF3B9; */
+    --accent-color: #7886C7;
+    --base-color:#A9B5DF;
+    --text-color: #2D336B;
+    --input-color:#FFF2F2;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Poppins',Segoe UI , sans-serif;
+    font-size: 12pt;
+    color: var(--text-color);
+    text-align: center;
+}
+body{
+    min-height: 100vh;
+    background-image: url(./asset/Group\ 2.svg);
+    background-size: cover;
+    background-position: right;
+    overflow: hidden;
+    position: relative;
+}
+.wrapper{
+    box-sizing: border-box;
+    background-color: var(--base-color);
+    height: 100vh;
+    width: max(40%, 600px);
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+}
+form{
+    width: min(400px,100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-color);
+    fill: var(--base-color);
+    color: var(--base-color);
+    border-radius: 10px 0  0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 1.5rem;
+    font-weight: 500;
+}
+form input{
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1rem;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color:var(--input-color);
+    transition: 150ms ease;
+}
+form input:hover{
+    border-color: var(--accent-color);
+}
+form input:focus{
+    outline:none;
+    border-color: var(--text-color);
+}
+div:has(input:focus) > label{
+    background-color: var(--text-color);
+}
+form input::placeholder{
+    color:var(--text-color);
+}
+form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 50px;
+    padding: .85em 4em;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform:uppercase;
+    cursor: pointer;
+    transition:150ms ease;
+}
+ form button:hover{
+    background-color: var(--text-color);
+}
+form button:focus{
+    outline: none;
+    background-color: var(--text-color);
+}
+a{
+    text-decoration: none;
+    color: var(--accent-color)
+}
+a:hover{
+    text-decoration: underline;
+}
+@media(max-width:1000px){
+    .wrapper{
+        width: min(600px, 100%);
+        border-radius:0;
+    }
+}
+form div.incorrect label{
+    background-color: #f06272;
+}
+form div .incorrect input{
+    border-color:#f06272
+}
+#errro-message{
+    color : #f06272
+}
